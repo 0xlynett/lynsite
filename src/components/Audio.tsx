@@ -1,6 +1,5 @@
 import AudioPlayer from "react-h5-audio-player";
 
-import { useStore } from "@nanostores/react";
 import { lyric } from "../stores/lyrics";
 import "../styles/audio-player.scss";
 
