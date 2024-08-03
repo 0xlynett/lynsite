@@ -3,7 +3,7 @@ import AudioPlayer from "react-h5-audio-player";
 import { lyric } from "../stores/lyrics";
 import "../styles/audio-player.scss";
 
-import JunkyardEulogy from "/junkyard-eulogy.m4a";
+import JunkyardEulogy from "../assets/junkyard-eulogy.m4a";
 import { useEffect, useRef, useState, type Ref } from "react";
 
 export default function Audio() {
