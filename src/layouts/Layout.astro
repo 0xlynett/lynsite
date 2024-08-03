@@ -14,14 +14,15 @@ const { title } = Astro.props;
       name="description"
       content="they're lost somewhere in the guts of these machines
 lost somewhere in the guts of these machines
-lost somewhere in the^C
-"
+lost somewhere in the guts of these machines
+lost somewhere in the guts of these machines
+lost somewhere in the guts of these machines"
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="scrollbar scrollbar-thumb-red-full">
     <slot />
   </body>
 </html>
