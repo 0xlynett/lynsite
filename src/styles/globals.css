@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
-@plugin 'tailwind-scrollbar';
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-red-full: #ff0000;
+  --font-sans: "Hubot Sans", "sans-serif";
+}
 
-  --color-green-full: #00ff00;
-
-  --color-blue-full: #0000ff;
-
+@theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
 
@@ -129,5 +126,15 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .child-links a,
+  .link {
+    @apply underline underline-offset-4 transition-colors hover:text-red-500;
+  }
+  .scrollbar {
+    @apply [&::-webkit-scrollbar]:w-2
+        [&::-webkit-scrollbar-track]:rounded-full
+        [&::-webkit-scrollbar-thumb]:rounded-full
+        [&::-webkit-scrollbar-thumb]:bg-white/50;
   }
 }

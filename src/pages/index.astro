@@ -1,22 +1,108 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AudioPlayer from "../components/Audio";
 import { Icon } from "astro-icon/components";
 import Lyric from "../components/Lyric";
-
+import { Separator } from "../components/ui/separator.tsx";
 import "../assets/junkyard-eulogy.m4a";
+import NoiseEffect from "../components/NoiseEffect.svg";
+import Quotes from "../components/quotes.astro";
 ---
 
 <Layout title="lynett.eth">
-  <div class="h-screen w-full bg-black p-8 relative">
-    <div
-      class="absolute z-10 bg-[radial-gradient(transparent_1px,#000_0.5px)] [background-size:3px_3px] opacity-50 mix-blend-overlay h-full w-full"
-    >
-    </div>
+  <div class="flex flex-col justify-between lg:flex-row gap-8">
+    <section class="gap-4 max-w-fit flex flex-col">
+      <h1 class="font-bold text-5xl sm:text-7xl">lynett.eth</h1>
+      <ol class="flex flex-row gap-4">
+        <li>
+          <a href="https://x.com/lynett0x" aria-label="X (@Lynett0x)"
+            ><Icon
+              name="ph:x-logo"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://discord.com/users/1076221600032112680"
+            aria-label="Discord (_lynett)"
+            ><Icon
+              name="ph:discord-logo"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://debank.com/profile/0xC2f3F2c8084d6bc40887B0B867353d280e3D742D"
+            aria-label="Ethereum wallet"
+            ><Icon
+              name="ph:wallet"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/0xlynett" aria-label="GitHub (@0xLynett)"
+            ><Icon
+              name="ph:github-logo"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://paragraph.xyz/@0xlynett"
+            aria-label="Blog on Paragraph"
+            ><Icon
+              name="ph:notebook"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+      </ol>
+      <Separator />
+      <div class="text-lg max-w-screen-sm space-y-4">
+        <p class="child-links">
+          <span class="font-semibold text-xl">My interests</span> include trading,
+          <a href="https://en.wikipedia.org/wiki/Decentralized_finance"
+            >decentralised finance</a
+          >, programming, <a href="https://prx.city">Praxis</a>, <a
+            href="http://www.ancapfaq.com/index.html">anarcho-capitalism</a
+          >, <a href="https://kleros.io">private law</a>, <a
+            href="https://en.wikipedia.org/wiki/Cryptoeconomics"
+            >cryptoeconomics</a
+          >, <a href="https://en.wikipedia.org/wiki/Financial_engineering"
+            >financial engineering</a
+          >, open source, <a
+            href="https://hackmd.io/@ilikesymmetry/intro-keystore-rollup"
+            >keystore rollups</a
+          > and <a href="https://ethereum.org">Ethereum</a>.
+        </p>
+        <p>
+          <span class="font-semibold text-xl">My skills</span> include proficiency
+          in working with Solidity, React and JS/TS; not finishing projects, amateur
+          design.
+        </p>
+        <p>
+          Currently a software engineer at <a
+            href="https://2077.xyz"
+            class="link">2077 Collective</a
+          >.
+        </p>
+        <p>
+          I'm also working on <a href="https://arvensis.systems" class="link"
+            >Arvensis Systems</a
+          >.
+        </p>
+        <p>
+          Very proudly a <a href="https://prx.city" class="link">Praxian</a> citizen.
+        </p>
+      </div>
+    </section>
     <section
-      class="p-8 border rounded-xl h-full bg-linear-to-tr from-neutral-800 to-black"
+      class="max-w-screen-sm lg:h-[calc(100vh---spacing(24))] overflow-y-auto scrollbar pr-4"
     >
-      can we save this?
+      <Quotes />
     </section>
   </div>
 </Layout>
