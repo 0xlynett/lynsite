@@ -1,4 +1,6 @@
 ---
+import "@/styles/globals.css";
+
 interface Props {
   title: string;
 }
@@ -18,22 +20,8 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body
-    class="scrollbar scrollbar-thumb-black bg-gradient-to-b from-black via-orange-600 to-red-full dark h-full"
-  >
-    <div class="text-white font-mono overflow-hidden relative">
-      <i
-        class="fixed z-40 h-screen w-full max-w-screen border border-red-full overflow-hidden pointer-events-none"
-      ></i>
-      <div class="flex">
-        <slot name="corner" />
-        <main
-          class="md:mt-16 mx-auto z-20 bg-black border-x border-t border-red-full max-w-screen-md transition-all min-h-screen"
-        >
-          <slot />
-        </main>
-      </div>
-    </div>
+  <body class="bg-black text-white dark">
+    <slot />
   </body>
 </html>
 
