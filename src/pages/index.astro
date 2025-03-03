@@ -1,118 +1,108 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AudioPlayer from "../components/Audio";
 import { Icon } from "astro-icon/components";
 import Lyric from "../components/Lyric";
-
+import { Separator } from "../components/ui/separator.tsx";
 import "../assets/junkyard-eulogy.m4a";
+import NoiseEffect from "../components/NoiseEffect.svg";
+import Quotes from "../components/quotes.astro";
 ---
 
 <Layout title="lynett.eth">
-  <p class="fixed z-0 top-2 left-2" slot="corner"><Lyric client:only /></p>
-  <section class="p-8">
-    <h1 class="text-5xl">
-      lynett<a href="https://app.ens.domains/lynett.eth" class="link">.eth</a>
-    </h1>
-    <p class="text-xl font-mono my-2">
-      An agent of ordered anarchy retrocausally initiated in 2023. <a href="https://praxisnation.com" class="link">Praxian</a> technocapitalist.
-    </p>
-    <p class="text-xl">
-      Software Engineer @ <a href="https://2077.xyz" class="link font-bold">
-        2077 Collective
-      </a>
-    </p>
-    <p class="text-xl">
-      CTO @ <a href="https://arvensis.capital" class="link font-bold"
-        >Arvensis Capital</a
-      >
-    </p>
-    <ol class="mt-4 flex flex-row gap-4">
-      <li>
-        <a href="https://x.com/lynett0x" aria-label="X (@Lynett0x)"
-          ><Icon
-            name="ph:x-logo"
-            class="h-8 w-8 hover:text-red-full transition-all"
-          /></a
-        >
-      </li>
-      <li>
-        <a
-          href="https://discord.com/users/1076221600032112680"
-          aria-label="Discord (_lynett)"
-          ><Icon
-            name="ph:discord-logo"
-            class="h-8 w-8 hover:text-red-full transition-all"
-          /></a
-        >
-      </li>
-      <li>
-        <a
-          href="https://debank.com/profile/0xC2f3F2c8084d6bc40887B0B867353d280e3D742D"
-          aria-label="Ethereum wallet"
-          ><Icon
-            name="ph:wallet"
-            class="h-8 w-8 hover:text-red-full transition-all"
-          /></a
-        >
-      </li>
-      <li>
-        <a href="https://github.com/0xlynett" aria-label="GitHub (@0xLynett)"
-          ><Icon
-            name="ph:github-logo"
-            class="h-8 w-8 hover:text-red-full transition-all"
-          /></a
-        >
-      </li>
-      <li>
-        <a href="https://paragraph.xyz/@0xlynett" aria-label="Blog on Paragraph"
-          ><Icon
-            name="ph:notebook"
-            class="h-8 w-8 hover:text-red-full transition-all"
-          /></a
-        >
-      </li>
-    </ol>
-  </section>
-  <hr class="border-t border-red-full" />
-  <div class="m-4">
-    <p class="pl-4 pt-4">
-      junkyard-eulogy.m4a by
-      <a href="https://www.youtube.com/watch?v=BmB79qL5VLE" class="link"
-        >mekaloton</a
-      >
-    </p>
-    <AudioPlayer client:only />
-  </div>
-  <hr class="border-t border-red-full" />
-  <section class="p-8">
-    <blockquote>
-      You need to be clear in yourself to survive the coming period of
-      thought-chaos, because it will make you question your perception, your
-      awareness, your presence... what is natural, what is true, what is real.
-      <br />
-      <cite
-        ><a
-          href="https://goldenlight.mirror.xyz/LeUojosmx48SvEfspq1leuRTf7TJfYKJ_TtKpePczzU"
-          class="link">&mdash;Charlotte Fang</a
-        ></cite
-      >
-    </blockquote>
-  </section>
-  <hr class="border-t border-red-full" />
-  <section class="p-4">
-    <a
-      class="text-center font-bold font-serif block text-xl underline hover:text-red-500"
-      href="/quotes"
+  <div class="flex flex-col justify-between lg:flex-row gap-8">
+    <section class="gap-4 max-w-fit flex flex-col">
+      <h1 class="font-bold text-5xl sm:text-7xl">lynett.eth</h1>
+      <ol class="flex flex-row gap-4">
+        <li>
+          <a href="https://x.com/lynett0x" aria-label="X (@Lynett0x)"
+            ><Icon
+              name="ph:x-logo"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://discord.com/users/1076221600032112680"
+            aria-label="Discord (_lynett)"
+            ><Icon
+              name="ph:discord-logo"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://debank.com/profile/0xC2f3F2c8084d6bc40887B0B867353d280e3D742D"
+            aria-label="Ethereum wallet"
+            ><Icon
+              name="ph:wallet"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/0xlynett" aria-label="GitHub (@0xLynett)"
+            ><Icon
+              name="ph:github-logo"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://paragraph.xyz/@0xlynett"
+            aria-label="Blog on Paragraph"
+            ><Icon
+              name="ph:notebook"
+              class="h-8 w-8 hover:text-red-full transition-all"
+            /></a
+          >
+        </li>
+      </ol>
+      <Separator />
+      <div class="text-lg max-w-screen-sm space-y-4">
+        <p>
+          Currently a software engineer at <a
+            href="https://2077.xyz"
+            class="link">2077 Collective</a
+          >.
+        </p>
+        <p>
+          CEO of <a href="https://arvensis.systems" class="link"
+            >Arvensis Systems</a
+          >.
+        </p>
+        <p>
+          Very proudly a <a href="https://prx.city" class="link">Praxian</a> citizen.
+        </p>
+        <p class="child-links">
+          <span class="font-semibold text-xl">My interests</span> include trading,
+          <a href="https://en.wikipedia.org/wiki/Decentralized_finance"
+            >decentralised finance</a
+          >, programming, <a href="https://prx.city">Praxis</a>, <a
+            href="http://www.ancapfaq.com/index.html">anarcho-capitalism</a
+          >, <a href="https://kleros.io">private law</a>, <a
+            href="https://en.wikipedia.org/wiki/Cryptoeconomics"
+            >cryptoeconomics</a
+          >, <a href="https://en.wikipedia.org/wiki/Financial_engineering"
+            >financial engineering</a
+          >, open source, <a
+            href="https://hackmd.io/@ilikesymmetry/intro-keystore-rollup"
+            >keystore rollups</a
+          > and <a href="https://ethereum.org">Ethereum</a>.
+        </p>
+        <p>
+          <span class="font-semibold text-xl">My skills</span> include proficiency
+          in working with Solidity, React and JS/TS; not finishing projects, amateur
+          design.
+        </p>
+      </div>
+    </section>
+    <section
+      class="max-w-screen-sm lg:h-[calc(100vh---spacing(24))] overflow-y-auto scrollbar pr-4"
     >
-      Click to see the quotewall.
-    </a>
-  </section>
-  <hr class="border-t border-red-full" />
-  <section class="p-8">
-    <h2 class="text-2xl">interests</h2>
-    <p>
-      Decentralized finance. Crypto-anarchy. Shitposting. Building but not
-      finishing projects.
-    </p>
-  </section>
+      <Quotes />
+    </section>
+  </div>
 </Layout>
