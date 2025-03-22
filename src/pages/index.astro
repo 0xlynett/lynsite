@@ -1,16 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-import Lyric from "../components/Lyric";
 import { Separator } from "../components/ui/separator.tsx";
 import "../assets/junkyard-eulogy.m4a";
-import NoiseEffect from "../components/NoiseEffect.svg";
-import Quotes from "../components/quotes.astro";
 ---
 
 <Layout title="lynett.eth">
-  <div class="flex flex-col justify-between lg:flex-row gap-8">
-    <section class="gap-4 max-w-fit flex flex-col">
+  <div class="flex flex-col lg:flex-row gap-8">
+    <section class="gap-4 max-w-fit flex flex-col min-w-160">
       <h1 class="font-bold text-5xl sm:text-7xl">lynett.eth</h1>
       <ol class="flex flex-row gap-4">
         <li>
@@ -63,19 +60,23 @@ import Quotes from "../components/quotes.astro";
       <Separator />
       <div class="text-lg max-w-screen-sm space-y-4">
         <p>
-          Currently a software engineer at <a
-            href="https://2077.xyz"
-            class="link">2077 Collective</a
-          >.
+          Hey, I'm Lyn. I'm a Praxian citizen who's highly passionate about
+          Ethereum and decentralized finance.
         </p>
-        <p>
-          CEO of <a href="https://arvensis.systems" class="link"
-            >Arvensis Systems</a
-          >.
-        </p>
-        <p>
-          Very proudly a <a href="https://prx.city" class="link">Praxian</a> citizen.
-        </p>
+        <h2 class="font-bold text-xl">Where I work at</h2>
+        <ul class="list-disc list-inside child-links">
+          <li>CEO @ <a href="https://arvensis.systems">Arvensis Systems</a></li>
+          <li>
+            Social Media Intern @ <a href="https://saharacompute.com"
+              >Sahara Compute</a
+            >
+          </li>
+          <li>
+            Junior Software Engineer @ <a href="https://2077.xyz"
+              >2077 Collective</a
+            >
+          </li>
+        </ul>
         <p class="child-links">
           <span class="font-semibold text-xl">My interests</span> include trading,
           <a href="https://en.wikipedia.org/wiki/Decentralized_finance"
@@ -93,16 +94,10 @@ import Quotes from "../components/quotes.astro";
           > and <a href="https://ethereum.org">Ethereum</a>.
         </p>
         <p>
-          <span class="font-semibold text-xl">My skills</span> include proficiency
-          in working with Solidity, React and JS/TS; not finishing projects, amateur
-          design.
+          <span class="font-semibold text-xl">My skills</span> include Solidity,
+          React and JS/TS; not finishing projects, amateur design.
         </p>
       </div>
-    </section>
-    <section
-      class="max-w-screen-sm lg:h-[calc(100vh---spacing(24))] overflow-y-auto scrollbar pr-4"
-    >
-      <Quotes />
     </section>
   </div>
 </Layout>
